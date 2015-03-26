@@ -21,8 +21,10 @@
 
 };
       
-      data = function(){return MP.api.retention("Landing Page Loaded", params);};
-      console.log(data);
+      data =  MP.api.retention("Landing Page Loaded", params).done(function(result){
+        console.log(result);
+      });
+      
       
       var table = $('<div></div>').appendTo('body').MPTable();     // Create a table
       table.MPTable('setData', data);                              // Set the table's data
