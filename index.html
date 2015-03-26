@@ -11,7 +11,17 @@
     <script>
       
       
-      data = MP.api.segmentation("Landing Page Loaded", {from: "2015-01-01", to: "2015-03-24", unit: "week" });
+      var params = {
+    from: moment().subtract(1, 'months'),
+    to: moment(),
+    unit: 'day',                      // specifies the the bucket size; can be 'day' or 'week'
+    interval_count: 1,                // the number of desired units
+    limit: 100,                       // maximum number of results to return
+
+
+};
+      
+      data = MP.api.retention("Landing Page Loaded", params);
       
       
       var table = $('<div></div>').appendTo('body').MPTable();     // Create a table
