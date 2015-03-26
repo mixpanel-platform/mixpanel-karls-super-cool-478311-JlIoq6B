@@ -21,14 +21,14 @@
 
       };
       
-      MP.api.retention("Image Focused", params).done(function(result){
+      data =MP.api.retention("Image Focused", params).done(function(result){
         console.log(result.values());
       });
       
-     /* 
+     
       var table = $('<div></div>').appendTo('body').MPTable();     // Create a table
-      table.MPTable('setData', data);                              // Set the table's data
-    */
+      table.MPTable('setData', data.values());                              // Set the table's data
+    
     </script>
   </body>
 </html>
