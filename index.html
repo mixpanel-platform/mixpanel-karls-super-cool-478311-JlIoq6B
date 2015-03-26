@@ -22,7 +22,7 @@
 };
       
       data = MP.api.retention("Landing Page Loaded", params);
-      
+      console.log(data);
       
       var table = $('<div></div>').appendTo('body').MPTable();     // Create a table
       table.MPTable('setData', data);                              // Set the table's data
