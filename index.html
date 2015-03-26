@@ -19,15 +19,16 @@
     limit: 100,                       // maximum number of results to return
 
 
-};
+      };
       
-      data =  MP.api.retention("Image Focused", params).done(function(result){
+      MP.api.retention("Image Focused", params).done(function(result){
         console.log(result);
       });
       
-      
+     /* 
       var table = $('<div></div>').appendTo('body').MPTable();     // Create a table
       table.MPTable('setData', data);                              // Set the table's data
+    */
     </script>
   </body>
 </html>
